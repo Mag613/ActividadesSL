@@ -1,0 +1,55 @@
+Codigo
+
+docker run --name mariadb01 -d 
+-e MYSQL_ROOT_PASSWORD=root
+-e MYSQL_DATABASE=wordpress01 
+-e MYSQL_USER=user 
+-e MYSQL_PASSWORD=userP mariadb:10.0.29
+
+docker run -d redis
+
+docker ps
+
+docker inspect id-container
+
+docker run -d --name redisHostPort -p 6379:6379 redis:latest
+
+docker search
+
+docker pull mariadb:10.0.29
+
+docker run --name mariadb01 -d -e MYSQL_ROOT_PASSWORD=root_P@ssw0rd -e MYSQL_DATABASE=wordpress01 -e MYSQL_USER=user_wordpress01 -e MYSQL_PASSWORD=user_P@ssw0rd mariadb:10.0.29
+
+docker exec -i -t mariadb01 bash
+
+mysql -u user_wordpress01 -p
+
+user_P@ssw0rd
+
+show databases;
+
+quit
+
+exit
+
+docker run --name wordpress01 -d -p 8080:80 --link mariadb01 wordpress:4.7.2-apache
+
+docker ps
+
+docker exec -it wordpress01 bash
+
+cat /etc/hosts
+
+exit
+
+docker run --name ubuntu010 -it -v /mnt/volume010:/valume010 ubuntu:17.04 /bin/bash
+
+ls
+
+cd volume010
+
+cat > filename.txt
+
+exit
+
+
